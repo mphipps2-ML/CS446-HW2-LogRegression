@@ -1,4 +1,4 @@
-3import torch
+import torch
 import torch.optim as optim
 
 torch.manual_seed(1)
@@ -20,6 +20,7 @@ for iter in range(100):
     ##############################
     loss = torch.mean(torch.log(1+tmp))
 
+    
     loss.backward()
     print("Loss: %f; ||g||: %f" % (loss, torch.norm(w.grad)))
 
@@ -28,6 +29,5 @@ for iter in range(100):
     ##############################
     optimizer.step()
     optimizer.zero_grad()
- 
 
 print(w)

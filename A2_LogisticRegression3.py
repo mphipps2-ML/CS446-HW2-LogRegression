@@ -9,8 +9,7 @@ X = torch.Tensor([[-1, 1, 2],[1, 1, 1]])
 ## used in A2_LogisticRegression2.py and A2_LogisticRegression.py
 ## Dimensions: y (3)
 ##############################
-#y = torch.Tensor([, , ])
-y = torch.Tensor([0,1,1])
+y = torch.Tensor([0, 1, 1])
 
 alpha = 1
 
@@ -40,10 +39,7 @@ for iter in range(100):
     ##############################
     ## provide the arguments for the criterion function
     ##############################
-#    input = torch.randn(3,requires_grad=True)
-#    target = torch.empty(3).random_(2)
-    #criterion(input, target)
-    loss = criterion(netOutput,y )
+    loss = criterion(netOutput, y)
     
     loss.backward()
     gn = 0
